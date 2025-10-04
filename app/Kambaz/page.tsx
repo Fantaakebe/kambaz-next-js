@@ -1,6 +1,6 @@
-import { redirect } from "next/navigation";
-
-export default function Kambaz() {
-    redirect("/Account/Signin");
-
+// app/page.tsx
+import { redirect } from 'next/navigation';
+export default function Home() {
+  redirect('/Kambaz/Account/Signin');
+  return null;
 }
