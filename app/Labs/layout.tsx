@@ -1,6 +1,6 @@
 // app/Labs/layout.tsx
 import type { ReactNode } from "react";
-import TOC from "./TOC";
+import TOC from "./TOC"; 
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
@@ -12,5 +12,4 @@ export default function Layout({ children }: { children: ReactNode }) {
     </div>
   );
 }
-
 
