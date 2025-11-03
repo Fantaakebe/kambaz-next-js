@@ -16,9 +16,16 @@ export default function AssignmentEditor() {
               <input id="wd-points" defaultValue={100} />
             </td>
           </tr>
-          {/* Complete on your own */}
-        </table>
-      </div>
-  );}
-  
+        <tr>
+          <td align="right">
+            <label htmlFor="wd-due-date">Due Date</label>
+          </td>
+          <td>
+            <input id="wd-due-date" type="date" defaultValue="2025-05-13" />
+          </td>
+        </tr>
+      </table>
+    </div>
+  );
+}
   

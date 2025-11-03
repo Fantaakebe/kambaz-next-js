@@ -1,7 +1,9 @@
-import { redirect } from 'next/navigation';
-export default function Home() {
-  redirect('/Account/Signin');
-  return null;
+import { redirect } from "next/navigation";
+
+
+export default async function CoursesPage({ params, }: { params: Promise<{ cid: string }>; }) {
+ const { cid } = await params;
+ redirect(`/Courses/${cid}/Home`);
 }
 
 

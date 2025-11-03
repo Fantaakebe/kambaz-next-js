@@ -16,7 +16,7 @@ export default function Assignments() {
               A1 - ENV + HTML
             </Link> </li>
           <li className="wd-assignment-list-item">
-            {/* Complete On Your Own */}
+            A2 - CSS
           </li>
         </ul>
       </div>
