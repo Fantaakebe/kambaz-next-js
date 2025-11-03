@@ -18,7 +18,7 @@ export default function AssignmentEditor() {
           </tr>
         <tr>
           <td align="right">
-            <label htmlFor="wd-due-date">Due Date</label>
+            <label htmlFor="wd-due-date">Due Date: </label>
           </td>
           <td>
             <input id="wd-due-date" type="date" defaultValue="2025-05-13" />
