@@ -18,6 +18,14 @@ export default function Labs() {
            Lab 3: JavaScript Fundamentals </Link>
        </li>
      </ul>
+     <p>
+        <a id="wd-github-link" href="https://github.com/Fantaakebe/kambaz-next-js" target="_blank">
+          GitHub Repository
+          </a>
+      </p>
+      <p>
+        Back to <Link href="/">Kambaz</Link>
+      </p>
    </div>
 );}
 

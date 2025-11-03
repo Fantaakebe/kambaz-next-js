@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import Link from "next/link";
 import AccountNavigation from "./Navigation";
 export default function AccountLayout({ children }: Readonly<{ children: ReactNode }>) {
  return (
@@ -7,6 +8,9 @@ export default function AccountLayout({ children }: Readonly<{ children: ReactNo
        <tbody>
          <tr>
            <td valign="top">
+           <div style={{ marginBottom: 8 }}>
+                <Link href="/" id="wd-kambaz-home-link">Kambaz</Link>
+              </div>
              <AccountNavigation />
            </td>
            <td valign="top" width="100%">
