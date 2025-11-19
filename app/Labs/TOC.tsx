@@ -1,28 +1,33 @@
-import { Nav, NavItem, NavLink } from "react-bootstrap";
+"use client";
+
 import Link from "next/link";
+import { Nav } from "react-bootstrap";
+
 export default function TOC() {
- return (
-  <Nav variant="pills">
-  <NavItem>
-    <NavLink href="/Labs" as={Link}>Labs</NavLink>
-  </NavItem>
-  <NavItem>
-    <NavLink href="/Labs/Lab1" as={Link}>Lab 1</NavLink>
-  </NavItem>
-  <NavItem>
-    <NavLink href="/Labs/Lab2" as={Link}>Lab 2</NavLink>
-  </NavItem>
-  <NavItem>
-    <NavLink href="/Labs/Lab3" as={Link}>Lab 3</NavLink>
-  </NavItem>
-  <NavItem>
-    <NavLink href="/" as={Link}>Kambaz</NavLink>
-  </NavItem>
-  <NavItem>
-    <NavLink href="https://github.com/jannunzi">My GitHub</NavLink>
-  </NavItem>
-</Nav>
-);}
+  return (
+    <Nav variant="pills" id="wd-labs-toc">
+      <Nav.Item>
+        <Nav.Link as={Link} href="/Labs/Lab1">
+          Lab 1
+        </Nav.Link>
+      </Nav.Item>
+
+      <Nav.Item>
+        <Nav.Link as={Link} href="/Labs/Lab2">
+          Lab 2
+        </Nav.Link>
+      </Nav.Item>
+
+      <Nav.Item>
+        <Nav.Link as={Link} href="/Labs/Lab3">
+          Lab 3
+        </Nav.Link>
+      </Nav.Item>
+
+      {/* add more labs if your professor wants them */}
+    </Nav>
+  );
+}
 
 
 

@@ -1,22 +1,21 @@
-import { ReactNode } from "react";
-import KambazNavigation from "./Navigation";
-import "./styles.css";
+import type { Metadata } from "next";
+import "./globals.css";
 
-export default function KambazLayout({ children }: { children: ReactNode }) {
+export const metadata: Metadata = {
+  title: "Kambaz",
+  description: "Kambaz Next.js app",
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <div id="wd-kambaz">
-      <div className="d-flex">
-        <div>
-          <KambazNavigation />
-        </div>
-        <div className="flex-fill">
-          {children}
-        </div>
-      </div>
-    </div>
+    <html lang="en">
+      <body>{children}</body>
+    </html>
   );
 }
-
-
 
 
