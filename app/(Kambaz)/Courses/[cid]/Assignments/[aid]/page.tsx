@@ -1,31 +1,42 @@
-export default function AssignmentEditor() {
-    return (
-      <div id="wd-assignments-editor">
-        <label htmlFor="wd-name">Assignment Name</label>
-        <input id="wd-name" defaultValue="A1 - ENV + HTML" /><br /><br />
-        <textarea id="wd-description">
-          The assignment is available online Submit a link to the landing page of
-        </textarea>
-        <br />
-        <table>
-          <tr>
-            <td align="right" valign="top">
-              <label htmlFor="wd-points">Points</label>
-            </td>
-            <td>
-              <input id="wd-points" defaultValue={100} />
-            </td>
-          </tr>
-        <tr>
-          <td align="right">
-            <label htmlFor="wd-due-date">Due Date: </label>
-          </td>
-          <td>
-            <input id="wd-due-date" type="date" defaultValue="2025-05-13" />
-          </td>
-        </tr>
-      </table>
+"use client";
+
+import { Form, Button } from "react-bootstrap";
+
+export default function EditAssignment() {
+  return (
+    <div id="wd-edit-assignment" className="p-3">
+
+      <Form.Group className="mb-3">
+        <Form.Label>Assignment Name</Form.Label>
+        <Form.Control id="wd-assignment-name" placeholder="A1" />
+      </Form.Group>
+
+      <Form.Group className="mb-3">
+        <Form.Label>Description</Form.Label>
+        <Form.Control
+          id="wd-description"
+          as="textarea"
+          rows={6}
+        />
+      </Form.Group>
+
+      <Form.Group className="mb-3">
+        <Form.Label>Points</Form.Label>
+        <Form.Control id="wd-points" type="number" placeholder="100" />
+      </Form.Group>
+
+      <Form.Group className="mb-3">
+        <Form.Label>Due Date</Form.Label>
+        <Form.Control id="wd-due-date" type="date" />
+      </Form.Group>
+
+      <div className="mt-3">
+        <Button variant="secondary" className="me-2">Cancel</Button>
+        <Button variant="danger">Save</Button>
+      </div>
+
     </div>
   );
 }
+
   

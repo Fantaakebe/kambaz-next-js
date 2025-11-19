@@ -1,18 +1,84 @@
-import Link from "next/link";
-export default function CourseNavigation() {
-  return (
-    <div id="wd-courses-navigation">
-      <Link href="/Courses/1234/Home" id="wd-course-home-link">Home</Link><br/>
-      <Link href="/Courses/1234/Modules" id="wd-course-modules-link">Modules
-        </Link><br/>
-      <Link href="/Courses/1234/Piazza" id="wd-course-piazza-link">Piazza</Link><br/>
-      <Link href="/Courses/1234/Zoom" id="wd-course-zoom-link">Zoom</Link><br/>
-      <Link href="/Courses/1234/Assignments" id="wd-course-assignments-link">
-          Assignments</Link><br/>
-      <Link href="/Courses/1234/Quizzes" id="wd-course-quizzes-link">Quizzes
-        </Link><br/>
-      <Link href="/Courses/1234/Grades" id="wd-course-grades-link">Grades</Link><br/>
-      <Link href="/Courses/1234/People/Table" id="wd-course-people-link">People</Link><br/>
-    </div>
-  );}
+"use client";
 
+import Link from "next/link";
+import { ListGroup, ListGroupItem } from "react-bootstrap";
+import { AiOutlineDashboard } from "react-icons/ai";
+import { IoCalendarOutline } from "react-icons/io5";
+import { LiaBookSolid } from "react-icons/lia";
+import { FaRegCircleUser } from "react-icons/fa6";
+
+export default function KambazNavigation() {
+  return (
+    <ListGroup
+      id="wd-kambaz-navigation"
+      className="rounded-0 position-fixed bottom-0 top-0 d-none d-md-block bg-black z-2"
+      style={{ width: 120 }}
+    >
+      <ListGroupItem
+        className="bg-black border-0 text-center"
+        as="a"
+        href="https://www.northeastern.edu/"
+        target="_blank"
+        id="wd-neu-link"
+      >
+        <img src="/images/NEU.png" width={75} />
+      </ListGroupItem>
+
+      <ListGroupItem className="border-0 bg-black text-center">
+        <Link
+          href="/Account"
+          id="wd-account-link"
+          className="text-white text-decoration-none"
+        >
+          <FaRegCircleUser className="fs-1 text-white" />
+          <br />
+          Account
+        </Link>
+      </ListGroupItem>
+
+      <ListGroupItem className="border-0 bg-black text-center">
+        <Link
+          href="/Dashboard"
+          id="wd-dashboard-link"
+          className="text-danger text-decoration-none"
+        >
+          <AiOutlineDashboard className="fs-1 text-danger" />
+          <br />
+          Dashboard
+        </Link>
+      </ListGroupItem>
+
+      <ListGroupItem className="border-0 bg-black text-center">
+        <Link
+          href="/Calendar"
+          id="wd-calendar-link"
+          className="text-white text-decoration-none"
+        >
+          <IoCalendarOutline className="fs-1 text-white" />
+          <br />
+          Calendar
+        </Link>
+      </ListGroupItem>
+
+      <ListGroupItem className="border-0 bg-black text-center">
+        <Link
+          href="/Inbox"
+          id="wd-inbox-link"
+          className="text-white text-decoration-none"
+        >
+          Inbox
+        </Link>
+      </ListGroupItem>
+
+      <ListGroupItem className="border-0 bg-black text-center">
+        <Link
+          href="/Labs"
+          id="wd-labs-link"
+          className="text-white text-decoration-none"
+        >
+          Labs
+        </Link>
+      </ListGroupItem>
+    </ListGroup>
+  );
+}
